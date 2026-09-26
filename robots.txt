@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mariamraouf.github.io/tatarjr-beats/sitemap.xml
