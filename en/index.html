@@ -806,7 +806,6 @@ a.btn,a.btn.ghost{border-bottom:0}
       <a href="#book" data-t="navBook">Book</a>
     </div>
     <a class="lang" href="../" hreflang="pl" lang="pl">PL</a>
-    <button class="crate-btn" id="crateOpen"><span data-t="crate">Crate</span> (<span id="crateCount">0</span>)</button>
   </div>
 </nav>
 
@@ -818,7 +817,6 @@ a.btn,a.btn.ghost{border-bottom:0}
     <div>
       <p class="eyebrow"><i></i> <span data-t="heroEyebrow">Producer and beatmaker. Beats for artists, loops for producers.</span></p>
       <h1 class="namestack"><span class="n1">Tatar</span><span class="n2">JR</span><span class="sr-only">Type beats, loops and custom production from Wroclaw, Poland</span></h1>
-      <p class="hero__lede" data-t="heroLede">Melodic beats with room left to write on. Chill guitar, lo-fi jazzy trap, pop trap and rnb, made for artists who actually record. Every beat plays <b>straight away, right here</b>, no signup and no email wall.</p>
       <div class="chips">
         <span class="chip on" data-t="chip1">Beats for sale</span>
         <span class="chip" data-t="chip2">Custom production</span>
@@ -860,7 +858,7 @@ a.btn,a.btn.ghost{border-bottom:0}
 <section class="sec wrap" id="store">
   <div class="sec__head">
     <div>
-      <div class="sec__num" data-t="sec1num">01 / THE CRATE</div>
+      <div class="sec__num" data-t="sec1num">01 / THE BEATS</div>
       <h2 data-t="sec1title">Beats <em>on the shelf</em></h2>
     </div>
     <div class="sec__note" data-t="sec1note">Every track here is a 45 second preview. The full version, tagless, comes with the license.</div>
@@ -873,7 +871,7 @@ a.btn,a.btn.ghost{border-bottom:0}
     <button aria-pressed="false" data-f="lofi" data-t="fLofi">Lo-fi jazzy</button>
   </div>
   <div class="beats" id="beats"></div>
-  <p class="store-foot" data-t="storeFoot"><b>How it works.</b> Pick a beat, pick a license, drop it in the crate, send the list. Files land in your inbox the same day, usually faster.<br><b>Prices are in US dollars.</b> Card, PayPal, Revolut or bank transfer, whatever is easiest for you.</p>
+  <p class="store-foot" data-t="storeFoot"><b>How it works.</b> Pick a beat, pick a license, then send me a DM with the title. Files land in your inbox the same day, usually faster.<br><b>Prices are in US dollars.</b> Card, PayPal, Revolut or bank transfer, whatever is easiest for you.</p>
 </section>
 
 
@@ -1031,17 +1029,12 @@ a.btn,a.btn.ghost{border-bottom:0}
 <section class="sec wrap" id="book">
   <div class="book">
     <div>
-      <h3 data-t="bookTitle">Send the crate, get the files</h3>
-      <p data-t="bookP1">Fastest way to reach me is an Instagram DM, I read those before email. If you already picked beats, open the crate, copy the list and paste it into the message. Tell me the artist name and the release date if you have one.</p>
-      <p data-t="bookP2">There is no studio to visit. Everything runs online, files go both ways, and you get them the same day you pay.</p>
-      <p style="color:var(--acid);font-family:var(--mono);font-size:13px;letter-spacing:.05em" data-t="bookP3">Replies usually inside a few hours, unless I am on a set.</p>
-      <div class="cta-row"><button class="btn" id="openCrate2" data-t="bookCta">Open the crate</button></div>
+      <h3 data-t="bookTitle">Hear it, then DM me</h3>
+      <p style="color:var(--acid);font-family:var(--mono);font-size:13px;letter-spacing:.05em" data-t="bookP3">Replies usually inside a few hours.</p>
+      <div class="cta-row"><a class="btn" id="dmCta" href="https://www.instagram.com/tatar.jr_beats/" target="_blank" rel="noopener" data-t="bookCta">Send a DM</a></div>
     </div>
     <div class="contact">
       <div><k data-t="cDm">DM</k><a href="https://www.instagram.com/tatar.jr_beats/" target="_blank" rel="noopener">@tatar.jr_beats</a></div>
-      <div><k>Email</k><a href="mailto:tatar.jr.beats@gmail.com">tatar.jr.beats@gmail.com</a></div>
-      <div><k>TikTok</k><a href="https://www.tiktok.com/@tatarjrbeats" target="_blank" rel="noopener">@tatarjrbeats</a></div>
-      <div><k data-t="cLoops">Loops</k><span data-t="cLoopsV">50 50 split, ask for the pack</span></div>
     </div>
   </div>
 </section>
@@ -1059,21 +1052,6 @@ a.btn,a.btn.ghost{border-bottom:0}
     </div>
   </div>
 </footer>
-
-<aside class="crate" id="crate" aria-label="Crate">
-  <div class="crate__top">
-    <h4 data-t="crate">Crate</h4>
-    <button class="crate__close" id="crateClose" data-t="close">Close</button>
-  </div>
-  <div class="crate__list" id="crateList"></div>
-  <div class="crate__foot">
-    <div class="crate__total"><span data-t="total">Total</span><span id="crateTotal">$0</span></div>
-    <a class="btn" id="crateSend" href="https://www.instagram.com/tatar.jr_beats/" target="_blank" rel="noopener" style="text-align:center" data-t="sendList">Send this list</a>
-    <a class="crate-btn" id="crateMail" href="mailto:tatar.jr.beats@gmail.com" style="width:100%;text-align:center;display:block;border-bottom:2px solid var(--acid)" data-t="mailList">Email the list instead</a>
-    <button class="crate-btn" id="crateCopy" style="width:100%" data-t="copyList">Copy list to clipboard</button>
-    <div class="crate__empty" id="crateMsg" data-t="crateHint">Nothing is charged here. Copy the list, then paste it into a DM or an email.</div>
-  </div>
-</aside>
 
 <div class="bar">
   <div class="wrap bar__in">
@@ -1113,23 +1091,19 @@ const T = {
     en:"Producer and beatmaker. Beats for artists, loops for producers.",
     pl:"Producent i beatmaker. Bity dla artystów, loopy dla producentów."
   },
-  heroLede:{
-    en:"Melodic beats with room left to write on. Chill guitar, lo-fi jazzy trap, pop trap and rnb, made for artists who actually record. Every beat plays <b>straight away, right here</b>, no signup and no email wall.",
-    pl:"Melodyjne bity z miejscem na tekst. Chillowa gitara, lo-fi jazzy trap, pop trap i rnb, robione dla artystów, którzy naprawdę nagrywają. Każdy bit odpalasz <b>od razu, tutaj</b>, bez zapisów i bez zostawiania maila."
-  },
   chip1:{en:"Beats for sale",pl:"Bity na sprzedaż"}, chip2:{en:"Custom production",pl:"Bit na zamówienie"},
   chip3:{en:"Loops for producers",pl:"Loopy dla producentów"},
   ctaPlay:{en:"Play the beats",pl:"Odpal bity"}, ctaBook:{en:"Get in touch",pl:"Napisz do mnie"},
   stick1:{en:"MP3 OR EXCLUSIVE",pl:"MP3 ALBO WYŁĄCZNOŚĆ"}, stick2:{en:"FILES SAME DAY",pl:"PLIKI TEGO SAMEGO DNIA"},
   vidTag:{en:"In the studio",pl:"W studio"},
 
-  sec1num:{en:"01 / THE CRATE",pl:"01 / SKRZYNKA"},
+  sec1num:{en:"01 / THE BEATS",pl:"01 / BITY"},
   sec1title:{en:"Beats <em>on the shelf</em>",pl:"Bity <em>na półce</em>"},
   sec1note:{en:"Every track here is a 45 second preview. The full version, tagless, comes with the license.",pl:"Każdy kawałek to 45 sekund podglądu. Pełna wersja bez taga jest w licencji."},
   fAll:{en:"All",pl:"Wszystko"}, fGuitar:{en:"Guitar",pl:"Gitara"}, fPop:{en:"Pop trap",pl:"Pop trap"}, fLofi:{en:"Lo-fi jazzy",pl:"Lo-fi jazzy"},
   storeFoot:{
-    en:"<b>How it works.</b> Pick a beat, pick a license, drop it in the crate, send the list. Files land in your inbox the same day, usually faster.<br><b>Prices are in US dollars.</b> Card, PayPal, Revolut or bank transfer, whatever is easiest for you.",
-    pl:"<b>Jak to działa.</b> Wybierz bit, wybierz licencję, wrzuć do koszyka i wyślij listę. Pliki dostajesz tego samego dnia, zwykle szybciej.<br><b>Ceny są w dolarach.</b> Karta, PayPal, Revolut albo przelew, jak ci wygodniej."
+    en:"<b>How it works.</b> Pick a beat, pick a license, then send me a DM with the title. Files land in your inbox the same day, usually faster.<br><b>Prices are in US dollars.</b> Card, PayPal, Revolut or bank transfer, whatever is easiest for you.",
+    pl:"<b>Jak to działa.</b> Wybierz bit, wybierz licencję i napisz do mnie DM z tytułem. Pliki wpadają na maila tego samego dnia, zwykle szybciej.<br><b>Ceny są w dolarach.</b> Karta, PayPal, Revolut albo przelew, jak ci wygodniej."
   },
 
   sec2num:{en:"03 / ON CAMERA",pl:"03 / PRZED KAMERĄ"},
@@ -1185,11 +1159,9 @@ const T = {
   platArtist:{en:"Artist",pl:"Artysta"}, platBeats:{en:"Beats",pl:"Bity"},
   platMusicYt:{en:"TatarJR music channel",pl:"Kanał muzyczny TatarJR"},
 
-  bookTitle:{en:"Send the crate, get the files",pl:"Wyślij koszyk, odbierz pliki"},
-  bookP1:{en:"Fastest way to reach me is an Instagram DM, I read those before email. If you already picked beats, open the crate, copy the list and paste it into the message. Tell me the artist name and the release date if you have one.",pl:"Najszybciej złapiesz mnie przez DM na Instagramie, czytam je przed mailem. Jeśli masz już wybrane bity, otwórz koszyk, skopiuj listę i wklej ją w wiadomość. Napisz nazwę artysty i datę premiery, jeśli już ją znasz."},
-  bookP2:{en:"There is no studio to visit. Everything runs online, files go both ways, and you get them the same day you pay.",pl:"Nie ma studia do odwiedzenia. Wszystko idzie online, pliki lecą w obie strony i dostajesz je tego samego dnia, w którym płacisz."},
-  bookP3:{en:"Replies usually inside a few hours, unless I am on a set.",pl:"Odpisuję zwykle w kilka godzin, chyba że akurat gram."},
-  bookCta:{en:"Open the crate",pl:"Otwórz koszyk"},
+  bookTitle:{en:"Hear it, then DM me",pl:"Posłuchaj i napisz DM"},
+  bookP3:{en:"Replies usually inside a few hours.",pl:"Odpisuję zwykle w kilka godzin."},
+  bookCta:{en:"Send a DM",pl:"Napisz DM"},
   cDm:{en:"DM",pl:"DM"},
   cLoops:{en:"Loops",pl:"Loopy"}, cLoopsV:{en:"50 50 split, ask for the pack",pl:"Podział 50 50, napisz po paczkę"},
 
@@ -1203,7 +1175,7 @@ const T = {
   crateHint:{en:"Nothing is charged here. Copy the list, then paste it into a DM or an email.",pl:"Tu nic nie płacisz. Skopiuj listę i wklej ją w DM albo maila."},
   crateEmpty:{en:"Crate is empty. Hit Crate on any beat, then pick the license you actually need.",pl:"Koszyk jest pusty. Kliknij Koszyk przy dowolnym bicie i wybierz licencję, której naprawdę potrzebujesz."},
   watchReel:{en:"Watch the reel",pl:"Zobacz rolkę"},
-  addBtn:{en:"+ Crate",pl:"+ Koszyk"}, inBtn:{en:"In crate",pl:"W koszyku"},
+  dmBtn:{en:"DM to buy",pl:"Napisz DM"},
   leaseFrom:{en:"lease / exclusive $500",pl:"licencja / wyłączność $500"},
   nothing:{en:"Nothing playing",pl:"Nic nie leci"},
   pickOne:{en:"Pick a beat below",pl:"Wybierz bit poniżej"},
@@ -1223,7 +1195,6 @@ function applyLang(){
   });
   const f = document.querySelector('#filters [aria-pressed="true"]');
   render(f ? f.dataset.f : 'all');
-  drawCrate();
   if(playing){
     const b = BEATS.find(x => x.id === playing);
     barSub.textContent = b.bpm + ' BPM / ' + b.key + ' / ' + b.style;
@@ -1361,7 +1332,7 @@ function render(filter){
       '<div class="b-meta">' + b.bpm + ' BPM<small>' + b.key + '</small></div>' +
       '<div class="wave" aria-hidden="true">' + waveBars(b.peaks) + '</div>' +
       '<div class="b-price">' + money(PRICES.mp3[lang]) + '<small>' + T.leaseFrom[lang] + '</small></div>' +
-      '<button class="add' + (crate.has(b.id) ? ' in' : '') + '" data-add="' + b.id + '">' + (crate.has(b.id) ? T.inBtn[lang] : T.addBtn[lang]) + '</button>';
+      '<a class="add" href="https://www.instagram.com/tatar.jr_beats/" target="_blank" rel="noopener">' + T.dmBtn[lang] + '</a>';
     beatsEl.appendChild(row);
   });
 }
@@ -1373,75 +1344,6 @@ document.getElementById('filters').addEventListener('click', e => {
 beatsEl.addEventListener('click', e => {
   const p = e.target.closest('[data-play]');
   if(p){ play(p.dataset.play); return; }
-  const a = e.target.closest('[data-add]');
-  if(a){ toggleCrate(a.dataset.add); }
-});
-
-/* ============ crate ============ */
-const crate = new Map();
-const crateEl = document.getElementById('crate');
-const listEl = document.getElementById('crateList');
-function priceOf(b, lic){ return LICENSES.find(l => l.k === lic).calc(b); }
-function toggleCrate(id){
-  if(crate.has(id)) crate.delete(id); else crate.set(id, 'mp3');
-  drawCrate();
-  render(document.querySelector('#filters [aria-pressed="true"]').dataset.f);
-  if(crate.size) openCrate();
-}
-function drawCrate(){
-  document.getElementById('crateCount').textContent = crate.size;
-  document.getElementById('crateOpen').dataset.full = crate.size ? '1' : '0';
-  listEl.innerHTML = '';
-  let total = 0;
-  if(!crate.size){
-    listEl.innerHTML = '<div class="crate__empty">' + T.crateEmpty[lang] + '</div>';
-  }
-  crate.forEach((lic, id) => {
-    const b = BEATS.find(x => x.id === id);
-    const amt = priceOf(b, lic); total += amt;
-    const row = document.createElement('div');
-    row.className = 'crate__row';
-    row.innerHTML =
-      '<div><strong>' + b.title + '</strong><div class="b-tags">' + b.bpm + ' BPM / ' + b.key + '</div>' +
-      '<select data-lic="' + id + '" aria-label="License for ' + b.title + '">' +
-      LICENSES.map(l => '<option value="' + l.k + '"' + (l.k === lic ? ' selected' : '') + '>' + l.label[lang] + '</option>').join('') +
-      '</select></div>' +
-      '<div style="text-align:right"><div class="crate__amt">' + money(amt) + '</div><button class="rm" data-rm="' + id + '">' + (lang === 'pl' ? 'usuń' : 'remove') + '</button></div>';
-    listEl.appendChild(row);
-  });
-  document.getElementById('crateTotal').textContent = money(total);
-  const lines = [...crate].map(([id, lic]) => {
-    const b = BEATS.find(x => x.id === id);
-    return b.title + ' (' + b.bpm + ' BPM, ' + b.key + ') - ' + LICENSES.find(l => l.k === lic).label.en + ' - ' + money(priceOf(b, lic));
-  });
-  const plain = lines.join('\n') + (lines.length ? '\n' + (lang === 'pl' ? 'Razem: ' : 'Total: ') + money(total) : '');
-  document.getElementById('crateSend').dataset.plain = plain;
-  const subject = lang === 'pl' ? 'Zamówienie bitów' : 'Beat order';
-  const intro = lang === 'pl' ? 'Cześć TatarJR,\n\nChcę te bity:\n\n' : 'Hi TatarJR,\n\nI want these beats:\n\n';
-  const outro = lang === 'pl' ? '\n\nNazwa artysty:\nData premiery:\n' : '\n\nArtist name:\nRelease date:\n';
-  document.getElementById('crateMail').href = 'mailto:tatar.jr.beats@gmail.com?subject=' + encodeURIComponent(subject) +
-    '&body=' + encodeURIComponent(intro + (plain.trim() || '') + (lines.length ? outro : ''));
-}
-listEl.addEventListener('change', e => {
-  const s = e.target.closest('[data-lic]'); if(!s) return;
-  crate.set(s.dataset.lic, s.value); drawCrate();
-});
-listEl.addEventListener('click', e => {
-  const r = e.target.closest('[data-rm]'); if(!r) return;
-  crate.delete(r.dataset.rm); drawCrate();
-  render(document.querySelector('#filters [aria-pressed="true"]').dataset.f);
-});
-function openCrate(){ crateEl.dataset.open = '1'; }
-document.getElementById('crateOpen').addEventListener('click', openCrate);
-document.getElementById('openCrate2').addEventListener('click', openCrate);
-document.getElementById('crateClose').addEventListener('click', () => crateEl.dataset.open = '0');
-document.addEventListener('keydown', e => { if(e.key === 'Escape') crateEl.dataset.open = '0'; });
-document.getElementById('crateCopy').addEventListener('click', async () => {
-  const txt = document.getElementById('crateSend').dataset.plain || '';
-  const msg = document.getElementById('crateMsg');
-  if(!txt.trim()){ msg.textContent = T.addFirst[lang]; return; }
-  try { await navigator.clipboard.writeText(txt); msg.textContent = T.copied[lang]; }
-  catch(err){ msg.textContent = T.copyFail[lang]; }
 });
 
 /* ============ player bar ============ */
